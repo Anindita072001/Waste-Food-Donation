@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@400;500;700&family=Charm:wght@400;700&family=Cookie&family=Courgette&family=DM+Serif+Display&family=Fondamento&family=Galada&family=Italianno&family=Itim&family=Kalam:wght@300;400&family=Kaushan+Script&family=Libre+Baskerville:wght@700&family=Permanent+Marker&family=Playball&family=Playpen+Sans:wght@600&family=Rancho&family=Roboto:wght@500&family=Salsa&family=Satisfy&family=Vollkorn&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+<h1 class="abc"><span id="klo">Our Lat</span> <span id="fgh">est Posts</span></h1>
+  <div *ngFor="let p of posts" class="card1">
+    <div class="thumbnail1">
+      <img class="left1" [src]="p.image | safe: 'url'" alt="Post Image" />
+    </div>
+    <div class="right1">
+      <br>
+      <div class="author1">
+        
+        <h2>{{ p.de.donor_name }}</h2>
+        
+      </div>
+      <h1 class="bcd"> It is our honor to serve you ❤️</h1>
+     
+      <div class="separator1"></div>
+      <p class="jio">{{p.describtion}}</p>
+      <p class="ghi"><span id="bklo">For whom:- </span> {{p.category}}</p>
+      <p class="ghi"><span id="bklo">Food type:- </span> {{p.food_type}}</p>
+      
+
+      <p class="ghi" ><span id="bklo">Email Id:-</span> {{ p.de.emailId }}</p>
+      <p class="ghi"><span id="bklo">Phone No:-</span>{{ p.de.donor_number }}</p>
+      <p class="ghi"><span id="bklo"> Address :-</span>{{p.location}}</p>
+      <!-- <h5>12</h5> -->
+      <h6>{{p.post_date}}</h6>
+      <button class="btn btn-danger btn-lg" *ngIf="isPastDate(p.post_date)" disabled>Food Already donated</button>
+     
+    
+    </div>
+  </div>
+
+</body>
+
+</html>

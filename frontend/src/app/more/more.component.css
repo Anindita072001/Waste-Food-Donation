@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Just the background stuff */
+span.s1,
+span.s2 {
+  position: absolute;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #3C4447;
+}
+
+span.s1 {
+  top: 0;
+  font-size: 15rem;
+}
+
+span.s2 {
+  bottom: 0;
+  right: 0;
+  font-size: 15rem;
+}
+
+/* My hum... body.. yeah.. */
+body {
+  background-color: #353B3F;
+  font-family: 'Roboto', sans-serif;
+  z-index: -3 !important;
+}
+
+/* The card1 */
+.card1 {
+  position: relative;
+  height: 450px;
+  width: 900px;
+  margin: 200px auto;
+  background-color: #FFF;
+  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Image on the left side */
+.thumbnail1 {
+  float: left;
+  position: relative;
+  left: 30px;
+  top: -30px;
+  height: 320px;
+  width: 530px;
+  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+img.left1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  transform: translate(-50%, -50%);
+ 
+
+}
+
+/* Right side of the card1 */
+.right1 {
+  margin-left: 590px;
+  margin-right: 20px;
+}
+
+ h1 {
+  padding-top: 15px;
+  font-size: 1.3rem;
+  color: #4B4B4B;
+}
+
+.author1 {
+  background-color: darkblue;
+  height: 30px;
+  width: 110px;
+  border-radius: 20px;
+}
+
+.author1 > img {
+  padding-top: 5px;
+  margin-left: 10px;
+  float: left;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+h2 {
+  padding-top: 8px;
+  margin-right: 6px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.separator1 {
+  margin-top: 10px;
+  border: 1px solid #C3C3C3;
+}
+
+.right1 > p {
+  text-align: justify;
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 150%;
+  color: #4B4B4B;
+  font-weight: 600;
+}
+
+/* DATE of release */
+.right1 > h5 {
+  position: absolute;
+  left: 30px;
+  bottom: -120px;
+  font-size: 6rem;
+  color: #C3C3C3;
+}
+
+.right1 > h6 {
+  position: absolute;
+  left: 30px;
+  bottom: 47px;
+  font-size: 2rem;
+  color: #C3C3C3;
+}
+
+/* Those futur buttons */
+.separator1 > ul {
+  margin-left: 250px;
+}
+
+.separator1 > li {
+  display: inline;
+  list-style: none;
+  padding-right: 40px;
+  color: #7B7B7B;
+}
+
+.abc{
+    color: white;
+    text-align: center;
+    font-size: 55px;
+    
+}
+
+
+
+.abc #fgh{
+  color: #ffa500;
+  text-shadow: 0px 1px 1px white;
+ 
+  font-family: 'Salsa', cursive;
+  margin: 20px auto;
+ 
+  
+  text-align: center;
+  border-bottom: 10px double white !important;
+}
+.abc #klo{
+  color: white;
+  text-shadow: 0px 1px 1px white;
+  font-family: 'Salsa', cursive;
+  margin: 20px auto;
+ 
+  
+  text-align: center;
+  border-bottom: 10px double #bc6c25;
+}
+
+.bcd{
+  font-family: 'Salsa', cursive;
+}
+.ghi{
+  font-family: 'Galada', cursive !important;
+}
+
+.ghi #bklo{
+  font-family: 'Rancho', cursive;
+}
+.jio{
+  font-family: 'Acme', sans-serif;
+}
+
+/* *****section**** */
+.container-fluid {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+}
+.media {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+figure {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  width: -150PX;
+  padding-right: 20%;
+  padding-left: -30%;
+  box-shadow:0px 0px 10px 1px  rgb(78, 45, 5);;
+}
+figure a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+figure:hover .media {
+  transform: scale(1.25);
+}
+figcaption {
+  color: #252830;
+  height: calc(100% - 30px);
+  margin: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+.body {
+  background-color: rgba(11, 11, 11, 0.236);
+  bottom: 0;
+  padding: 15px;
+  /* position: absolute; */
+  width: 100%;
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  
+}
+
+svg {
+height: inherit;
+width: 100%;
+text {
+  text-anchor: middle;
+}
+#alpha {
+  fill: white;
+}
+.title {
+  font-size: 28px;
+  font-family: "Montserrat";
+  letter-spacing: 5px;
+}
+#base {
+  fill: white;
+  -webkit-mask: url(#mask);
+  mask: url(#mask);
+}
+}

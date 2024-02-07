@@ -1,0 +1,144 @@
+<section class="bg-light">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 mb-4 mb-sm-5">
+              <div class="card card-style1 border-0">
+                  <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                      <div class="row align-items-center">
+                          <div class="col-lg-6 mb-4 mb-lg-0">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="...">
+                          </div>
+                          <div class="col-lg-6 px-xl-10">
+                              <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded" style="box-shadow:0px 0px 10px 10px rgba(65, 65, 65, 0.09);">
+                                  <h3 class="h2 text-white mb-0">{{donorData.donor_name}}</h3>
+                              </div>
+                              <ul class="list-unstyled mb-1-9">
+                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Full Name:</em></span><em>{{donorData.donor_name}}</em></li>
+                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Email id:</em></span><em>{{donorData.emailId}}</em></li>
+                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Phone No:</em></span><em>{{donorData.donor_number}}</em></li>
+                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Address:</em></span><em>{{donorData.donor_location}}</em></li>
+                                  <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Password:</em></span><em>{{donorData.donor_password}}</em></li>
+                              </ul>
+                           </div>
+                        </div>
+                 </div>
+              </div>
+          </div>
+     </div>
+  </div>
+    
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <button class="btn btn-primary" (click)="openModel()" style="margin-right: 30px; background-color: rgb(31, 16, 67);">Edit profile</button>
+      <button class="btn btn-primary" (click)="openModel2()" style="margin-right: 30px; background-color: rgb(31, 16, 67);">Delete Profile</button>
+    </div>
+  </div>
+
+  <br>
+  <div class="container" ngSkipHydration>
+    <h1>Posts</h1>
+    <div *ngFor="let p of posts" class="card mb-3" ngSkipHydration>
+        <img class="card-img-top" [src]="p.image | safe: 'url'" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" ngSkipHydration>{{ p.de.donor_name }}</h5>
+          <p class="card-text" class="ghi">{{p.describtion}}</p>
+          <p class="card-text" class="ghi"><span id="bklo"> For whom :-</span>{{p.category}}</p>
+          <p class="card-text" class="ghi"><span id="bklo"> Location of donate food :-</span>{{p.location}}</p>
+          <p class="card-text" class="ghi"><span id="bklo"> Date of donate food :-</span>{{p.post_date}}</p>
+          <p class="card-text" class="ghi"><span id="bklo">Food type:- </span>{{p.food_type}}</p>
+         
+          <button class="btn btn-success" (click)="updateSubmitPost(p.post_id)" >Update</button>
+        <button class="btn btn-danger" (click)="openModel3(p.post_id)">Delete</button>
+        </div>
+        
+      </div>
+</div>
+
+
+
+</section>
+
+<!-- Update Donner -->
+<div class="modal" id="myModel">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Update Details</h5>
+              <button type="button" (click)="closeModel()" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form (ngSubmit)="updateSubmit()">
+                  
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" name="organization_type" [(ngModel)]="donorData.donor_name"
+                          aria-describedby="emailHelp" >
+                  </div>
+                  
+                 
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" name="emailId" [(ngModel)]="donorData.emailId"
+                          aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Location</label>
+                      <input type="text" class="form-control" name="donor_location" [(ngModel)]="donorData.donor_location"
+                          aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">PhoneNo.</label>
+                      <input type="text" class="form-control" name="donor_number" [(ngModel)]="donorData.donor_number"
+                          aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" name="donor_password" [(ngModel)]="donorData.donor_password">
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Update</button>
+              </form>
+          </div>
+         
+      </div>
+  </div>
+</div>
+<!--for delete donner-->
+<div class="modal" id="myModel2">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Confirm Delete</h5>
+              <button type="button" (click)="closeModel2()" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <h2>Delete Parmanently</h2>
+          </div>
+         <button  class="btn btn-danger" (click)="deleteDonor()">Delete</button>
+      </div>
+  </div>
+</div>
+
+
+<!-- for delete post -->
+<div class="modal" id="myModel3">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Delete</h5>
+                <button type="button" (click)="closeModel3()" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <h2>Delete Parmanently</h2>
+            </div>
+           <button  class="btn btn-danger" (click)="deletePost1()">Delete</button>
+        </div>
+    </div>
+  </div>
+
+
+
+

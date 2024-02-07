@@ -1,0 +1,167 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div class="card card-style1 border-0">
+                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="...">
+                            </div>
+                            <div class="col-lg-6 px-xl-10">
+                                <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded" style="box-shadow:0px 0px 10px 0px rgba(42, 42, 42, 0.09);">
+                                    <h3 class="h2 text-white mb-0">{{orgData.organization_owner_name}}</h3>
+                                </div>
+                                <ul class="list-unstyled mb-1-9">
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Orgaization Type:</em></span><em>{{orgData.organization_type}}</em></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Orgaization Name:</em></span><em>{{orgData.organization_name}}</em></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Owner:</em></span><em>{{orgData.organization_owner_name}}</em></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Email id:</em></span><em>{{orgData.emailId}}</em></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Phone No:</em></span><em>{{orgData.organization_number}}</em></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Location:</em></span><em>{{orgData.location}}</em></li>
+                                 
+                                    <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600"><em>Password:</em></span><em>{{orgData.organization_password}}</em></li>
+                                </ul>
+                             </div>
+                          </div>
+                   </div>
+                </div>
+            </div>
+       </div>
+    </div>
+      
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <button class="btn btn-primary" (click)="openModel()" style="margin-right: 30px; background-color: rgb(31, 16, 67);">Edit Profile</button>
+        <button class="btn btn-primary" (click)="openModel2()" style="margin-left: 30px; background-color: rgb(31, 16, 67);">Delete Profile</button>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="row">
+            <div class="col-md-6">
+                <label>Experience</label>
+            </div>
+            <div class="col-md-6">
+                <p>Expert</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>Hourly Rate</label>
+            </div>
+            <div class="col-md-6">
+                <p>10$/hr</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>Total Projects</label>
+            </div>
+            <div class="col-md-6">
+                <p>230</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>English Level</label>
+            </div>
+            <div class="col-md-6">
+                <p>Expert</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>Availability</label>
+            </div>
+            <div class="col-md-6">
+                <p>6 months</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label>Your Bio</label><br />
+                <p>Your detail description</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--update-->
+<div class="modal" id="myModel">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Update Details</h5>
+              <button type="button" (click)="closeModel()" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form (ngSubmit)="updateSubmit()">
+                  
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Organization Type</label>
+                      <input type="text" class="form-control" name="organization_type" [(ngModel)]="orgData.organization_type"
+                          aria-describedby="emailHelp" >
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Organization Name</label>
+                      <input type="text" class="form-control" name="organization_name" [(ngModel)]="orgData.organization_name"
+                          aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Owner Name</label>
+                      <input type="text" class="form-control" name="organization_owner_name" [(ngModel)]="orgData.organization_owner_name"
+                          aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" name="emailId" [(ngModel)]="orgData.emailId"
+                          aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Location</label>
+                      <input type="text" class="form-control" name="location" [(ngModel)]="orgData.location"
+                          aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">PhoneNo.</label>
+                      <input type="text" class="form-control" name="organization_number" [(ngModel)]="orgData.organization_number"
+                          aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" name="organization_password" [(ngModel)]="orgData.organization_password">
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Update</button>
+              </form>
+          </div>
+         
+      </div>
+  </div>
+</div>
+
+<!--delete-->
+<div class="modal" id="myModel2">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Confirm Delete</h5>
+              <button type="button" (click)="closeModel2()" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <h2>Delete Parmanently</h2>
+          </div>
+         <button  class="btn btn-danger" (click)="deleteOrga()">Delete</button>
+      </div>
+  </div>
+</div>

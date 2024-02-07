@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Login Form UI</title>
+    
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+  </head>
+  <body>
+    
+    <div class="bg-img">
+      <div class="content">
+        <header>Post Details Edit</header>
+        <form (ngSubmit)="updatePostSubmit()">
+
+            <div class="mb-3">
+                <label class="form-label" class="oops">Food Type</label><br>
+                <select name="food_type" [(ngModel)]="postById.food_type" >
+                    <option>Veg</option>
+                    <option>Non-veg</option>
+                    <option>Others</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" class="oops">For whom</label><br>
+              <select name="food_type" [(ngModel)]="postById.category" >
+                  <option>Human</option>
+                  <option>Animal</option>
+                  <!-- <option>Others</option> -->
+              </select>
+          </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" class="oops">Date</label>
+                <input type="date" class="form-control" name="post_date" [(ngModel)]="postById.post_date"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" class="oops">Location</label>
+                <input type="text" class="form-control" name="location" [(ngModel)]="postById.location"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" class="oops">Describtion</label>
+                <input type="text" class="form-control" name="describtion" [(ngModel)]="postById.describtion"
+                    aria-describedby="emailHelp">
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+
+   
+
+
+  </body>
+</html>
+
+
+

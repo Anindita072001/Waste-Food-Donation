@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="../../assets/assetMore/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../../assets/assetMore/css/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- <link href="../../assets/assetMore/css/vegas.min.css" rel="stylesheet"> -->
+
+    <link href="../../assets/assetMore/css/tooplate-barista.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@400;500;700&family=Charm:wght@400;700&family=Cookie&family=Courgette&family=DM+Serif+Display&family=Fondamento&family=Galada&family=Italianno&family=Itim&family=Kalam:wght@300;400&family=Kaushan+Script&family=Libre+Baskerville:wght@700&family=Permanent+Marker&family=Playball&family=Playpen+Sans:wght@600&family=Rancho&family=Roboto:wght@500&family=Salsa&family=Satisfy&family=Vollkorn&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .image-area {
+            height: 100%;
+
+        }
+
+        .img-wrapper {
+            width: 448px;
+            height: 550px !important;
+            position: relative;
+            overflow: hidden;
+            margin-left: 20%;
+        }
+
+        .img-wrapper:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 180%;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, .3);
+            z-index: 1;
+            transform: skew(45deg);
+            transition: .5s;
+        }
+
+        .img-wrapper:hover:before {
+            left: -180%;
+        }
+
+        .img-wrapper img {
+            height: 558px;
+            width: 535px;
+            filter: grayscale(100%);
+            transition: 2s;
+        }
+
+        .img-wrapper:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .img-wrapper h2 {
+            background: tomato;
+            font-family: Poppins;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transform: perspective(400px) rotateY(90deg);
+            transform-origin: right;
+            transition: 1s;
+        }
+
+        .img-wrapper:hover h2 {
+            transform: perspective(400px) rotateY(0deg);
+        }
+
+        .img-wrapper ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background: rgba(255, 255, 255, 0);
+        }
+
+        .img-wrapper ul li {
+            background: #333;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            transform: perspective(800px) rotateY(90deg);
+            transition: .5s;
+            transform-origin: left;
+        }
+
+        .img-wrapper:hover ul li {
+            transform: perspective(800px) rotateY(0deg);
+        }
+
+        .img-wrapper:hover ul li:nth-child(1) {
+            transition-delay: .2s;
+        }
+
+        .img-wrapper:hover ul li:nth-child(2) {
+            transition-delay: .6s;
+        }
+
+        .img-wrapper:hover ul li:nth-child(3) {
+            transition-delay: .8s;
+        }
+
+        .img-wrapper:hover ul li:nth-child(4) {
+            transition-delay: 1s;
+        }
+
+        .img-wrapper ul li a {
+            color: tomato;
+            background: rgba(255, 255, 255, 0);
+        }
+
+        .img-wrapper ul li i {
+            color: tomato;
+            background: rgba(255, 255, 255, 0);
+        }
+
+        .img-wrapper ul li i:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero-section d-flex justify-content-center align-items-center" id="section_1" style=" background-image: url(/assets/assetMore/images/b2.jpg);
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;">
+
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 col-12 mx-auto">
+                    <em class="small-text"><h3 style="color:rgb(223, 105, 21);">Welcome to </h3></em>
+
+                    <h1>SEVA</h1>
+
+                    <p class="text-white mb-4 pb-lg-2">
+                        The best way to find yourself is <br>
+                        <em>to lose yourself</em> in the service of others.
+                    </p>
+
+                  
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero-slides"></div>
+    </section>
+
+
+    <section class="about-section section-padding" id="section_2" style="background-color: rgba(148, 83, 4, 0.777);">
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!--card-->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <figure>
+                                <div class="media" style="background-image: url(/assets/assetMore/images/waste1.jpeg)">
+                                </div>
+                                <figcaption>
+
+                                    <div class="body">
+                                        <h3 class="text-black mb-3">Who are we?</h3>
+                                        <p class="text-black" style="font-size: 12px;"><b>The Seva is is a website that
+                                                acts as a charity where anyone can
+                                                donate food to serve the less fortunate that
+                                                includes homeless families, orphanages, patients from public
+                                                hospitals,old
+                                                age homes and
+                                                many more.
+                                                Our initiative is minimizing food wastage and provide surplus food to
+                                                those
+                                                in
+                                                need.Everyday , tons of food are
+                                                discarded, contributing to environmental degradation and depriving
+                                                millions
+                                                of people of
+                                                a basic necessity.</b></p>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure>
+                                <div class="media" style="background-image: url(/assets/assetMore/images/hunger.jpeg)">
+                                </div>
+                                <figcaption>
+
+                                    <div class="body">
+                                        <h3 class="text-black mb-3">Our Vision</h3>
+                                        <p class="text-black" style="font-size: 13.5px;">
+                                            <b>To implement effective strategies to prevent wastage of food, we can
+                                                redirect surplus
+                                                food to those in need. This proactive approach not only reduces waste
+                                                but
+                                                also ensures
+                                                that hungry individuals have access to wholesome meals, fostering a more
+                                                sustainable and
+                                                compassionate society.</b>
+                                        </p>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="barista-section section-padding section-bg" id="barista-team" style="background-color: rgb(86, 49, 23);" >
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                    <em class="text-white">Let's Connect</em>
+
+                    <h2 class="text-white">With Us</h2>
+                </div>
+
+
+
+
+
+
+                <div class="flex flex-col lg:flex-row justify-around items-center" >
+                    <!-- <div class="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
+                        <div class="flex items-start mb-6 tm-menu-item"> -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                            <div class="image-area">
+                                <div class="img-wrapper">
+                                    <img src="../../assets/assetMore/images/aa.jpg" alt="Atul Prajapati">
+                                    <h2>Anindita Manna</h2>
+                                    <ul>
+                                        <li><a href="https://github.com/Anindita072001"><i
+                                                    class="fab fa-github"></i></a></li>
+                                        <li><a href="https://instagram.com/anindita.manna.902?igshid=OGQ5ZDc2ODk2ZA=="><i
+                                                    class="fab fa-instagram"></i></a></li>
+                                        <li><a
+                                                href="https://www.facebook.com/profile.php?id=100081834731941&mibextid=9R9pXO"><i
+                                                    class="fa-brands fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="https://www.linkedin.com/in/anindita-manna-361682219/"><i
+                                                    class="fa-brands fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            </div>
+
+<!-- 
+                        </div>
+                    </div> -->
+                    <!-- <div class="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container"> -->
+                        <!-- <div class="flex items-start mb-6 tm-menu-item"> -->
+                            <div class="col">
+                            <div class="image-area">
+                                <div class="img-wrapper">
+                                    <img src="../../assets/assetMore/images/dp.jpeg"
+                                        alt="Atul Prajapati">
+                                    <h2>Deepanwita Sarkar</h2>
+                                    <ul>
+                                        <li><a href="https://github.com/Deepanwita2000"><i
+                                            class="fab fa-github"></i></a></li>
+                                <li><a href="https://instagram.com/_blossom_yyyy?igshid=NzZlODBkYWE4Ng=="><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a
+                                        href="https://www.facebook.com/profile.php?id=100081834731941&mibextid=9R9pXO"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </li>
+                                <li><a href="https://www.linkedin.com/in/deepanwita-sarkar-0989011b6/"><i
+                                            class="fa-brands fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="reviews-section section-padding section-bg" id="section_4">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                    <em class="text-white">More details About</em>
+
+                    <h2 class="text-white">Food</h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-container timeline-container-left">
+                        <div class="timeline-content">
+                            <div class="reviews-block">
+                                <div class="reviews-block-image-wrap1 d-flex align-items-center" id="plmk">
+                                    <img src="../../assets/assetMore/images/ii.png"
+                                        class="reviews-block-image img-fluid" alt="">
+
+                                    <div class="">
+                                        <h6 class="text-black mb-0">Value of</h6>
+                                        <em class="text-black"> Food</em>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-block-info">
+                                    <p>Some say the value of food lies in the minerals it gives to our body, whereas
+                                        some argue about how food
+                                        takes them to a place where their heart aches to go. Whether is it nutrition or
+                                        nostalgia, food is a common
+                                        entity to all of us, regardless of geography, cultures, or even the year we are
+                                        born in. Everyone has to
+                                        eat, and over time, food has evolved to be an entity that encompasses not only
+                                        nutrients but bits and pieces
+                                        of our heritage as an important ingredient to the soul of the food.</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-container timeline-container-right">
+                        <div class="timeline-content">
+                            <div class="reviews-block">
+                                <div class="reviews-block-image-wrap2 d-flex align-items-center">
+                                    <img src="../../assets/assetMore/images/Waste.jpg"
+                                        class="reviews-block-image img-fluid" alt="">
+
+                                    <div class="">
+                                        <h6 class="text-white mb-0">Wastage</h6>
+                                        <em class="text-white"> of Food</em>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-block-info">
+                                    <p>The wastage of food starts right from its production to the final consumption.
+                                        While storing the grown crop, lots of food wastes because of improper storage.
+                                        Purchasing more than the needed food in restaurants and hotels is also a major
+                                        reason for food wastage. Sometimes, there is food prepared more than needed in
+                                        our houses, which brings the wastage of lots of food. The food, prepared in the
+                                        marriages and other functions, also causes food wastage in a huge amount.</p>
+
+                                    <div class="d-flex border-top pt-3 mt-4">
+                                        <strong class="text-white">4.5 <small class="ms-2">Rating</small></strong>
+
+                                        <div class="reviews-group ms-auto">
+                                            <i class="bi-star-fill"></i>
+                                            <i class="bi-star-fill"></i>
+                                            <i class="bi-star-fill"></i>
+                                            <i class="bi-star-fill"></i>
+                                            <i class="bi-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-container timeline-container-left">
+                        <div class="timeline-content">
+                            <div class="reviews-block">
+                                <div class="reviews-block-image-wrap3 d-flex align-items-center">
+                                    <img src="../../assets/assetMore/images/donate.jpg"
+                                        class="reviews-block-image img-fluid" alt="">
+
+                                    <div class="">
+                                        <h6 class="text-white mb-0">Donate</h6>
+                                        <em class="text-white"> Food</em>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-block-info">
+                                    <p>According to the food waste hierarchy, feeding hungry people is the second-best
+                                        thing we can do to prevent food waste. That includes feeding yourself, your
+                                        household, or sharing food with your neighbors and friends. But if you have good
+                                        quality, unopened food that you wish to donate, that is still a great way to
+                                        reduce food waste. Donation may be a good option for you if you are traveling or
+                                        moving and have some extra food items. Find your closest donation location in
+                                        the "Where to go" section at the bottom of the page.
+
+                                        Donation items should be unopened, fresh, and high quality. It is sometimes okay
+                                        to donate food that are past the expiration date, click here for more
+                                        information.</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
+
+</body>
+
+</html>
